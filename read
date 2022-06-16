@@ -1,0 +1,65 @@
+npm install prop-types برای جلوگیری از تایپ های اشتباه
+import PropTypes from "prop-types"
+...
+....const { number } =this.props
+.....
+Child.propTypes = {
+  number: PropTypes.number
+
+}
+
+====== Portal ======
+import ReactDom from 'react-dom' ;
+const child = () => {
+  return ReactDom.createPoral(
+    <div>
+      <h1>Milad</h1>
+    </div>
+    document.getElementById("child-root")
+  );
+}
+
+====== errorBoundary =====
+folder =ErrorBoundery
+import React, {Component} from 'react' ;
+class ErrorBoundery extends Component {
+  constructor(props);
+  this.state = {
+    error: false,
+    errorMessage: ""
+  }
+}
+
+componentDidCatch(error,info) {
+  this.setState({
+    error: true,
+    errorMessage: error
+  })
+}
+render( ) {
+
+  if(this.state.error) {
+    return <p>{this.state.errorMessage}</p>
+  } else {
+    return this.props.children
+  }
+}
+
+=folder app
+
+ <ErrorBoundary>
+    <Child />
+ </ErrorBoundary>
+
+ ====== lifting state ======
+ یه مرحله استیتامون رو بالا بیاریم یعنی به جای این که داخل کامپوننت خودش 
+ باشه داخل کامپوننت اپ میاریم که بتونیم داخل کامپوننت های دیگه هم استفاده کنم
+
+==== HOC higher order Component ====
+برای ساخت فانکشن و استیت جدا که رو چندین کامپوننت می تواند اعمال شود 
+با تغییر استیت های مجزا
+برای پاس دادن پراپس به کامپوننت های جدید ابتدا باید به هایر اوردر پاس داده شود
+و حتی می تواند تمامن متغیر باشد
+
+===== render props =====
+ می توان تابعی یا همون متدی را به صورت پراپس به کامپوننت دیگری پاس داد

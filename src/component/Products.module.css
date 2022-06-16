@@ -1,0 +1,9 @@
+.container {
+  margin: 0px 0px 0px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(57, 5, 106);
+  flex-wrap: wrap;
+  min-height: 100vh;
+
+}

@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.container img {
+  width: 100%;
+  height: 700px;
+}
+
+.textContainer {
+  position: absolute;
+  top : 200 px ;
+  left: 100px ;
+}
+
+.textContainer h1 {
+  font-size: 5rem;
+  color: rgb(192, 16, 192);
+}
+
+.textContainer {
+  font-size: 3rem;
+  color: rgb(119, 0, 117);
+}
+
+.textContainer span{
+  font-size: 3rem;
+  background: -webkit-linear-gradient(rgb(252, 165, 255), rgb(205, 51, 179), rgb(678,999,89) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: changeColor 2s linear infinite alternate;
+}
+button {
+  color: blue;
+  background-color: rgb(29, 241, 29);
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+@keyframes changeColor {
+  to {filter : hue-rotate(90deg);}
+}
+
+@media (max-width : 780px ) {
+  .textContainer h1 {
+    font-size: 3rem;
+    padding-top: 30%;
+  }
+  .textContainer {
+    font-size: 2rem;
+    padding-left: 2%;
+    padding: 2%;
+  }
+  .textContainer span{
+    font-size: 2rem;
+    
+  }
+}

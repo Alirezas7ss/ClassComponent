@@ -1,0 +1,83 @@
+
+
+.container img {
+  width: 300px;
+  height: 300px;
+}
+
+
+.container {
+  width: 300px;
+  background-color: cadetblue;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: -webkit-linear-gradient(rgb(252, 165, 255), rgb(205, 51, 179), rgb(678,999,89) );
+  animation: changeColor 2s linear infinite alternate;
+  margin: 10px 0px 50px;
+}
+@keyframes changeColor {
+  to {filter: hue-rotate(90deg);}
+}
+
+.container h3 {
+  color: black;
+  margin: 30px 20px 20px;
+}
+.container h3 a{
+  text-decoration: none;
+  background-color: rgba(0, 255, 255, 0.087);
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.034) ;
+
+ }
+
+.container p {
+  margin: 0px 25px 20px;
+  width: fit-content;
+  padding: 5px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  color: blueviolet;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  border-top: 1px rgb(1, 109, 113) solid;
+}
+.counter img {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+}
+.counter span {
+  background-color: blueviolet;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.deactive {
+  opacity: 0.3;
+}
+.active{
+  cursor: pointer;
+}
+.imgUp {
+  cursor: pointer;
+}
+@media(max-width : 750px ) {
+  .container {
+    align-items: center;
+    margin: 10px 12% 50px 12%;
+  }
+  .container img{ 
+    width: 100%;
+    padding : 0px 0px 50px 0px;    
+  }
+  .counter img {
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+  }
+}
